@@ -1,9 +1,25 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.SpringVersion;
+
 
 class Start {
     public static void main(String[] args) {
-        String s = SpringVersion.getVersion();
-        System.out.println(s);
+        GenericApplicationContext context;
+        context = new GenericApplicationContext();
+        context.registerBean(Shop.class);
+        context.refresh();
+        
+        Shop s = context.getBean(Shop.class);
+        s.name = "iCoffee";
+        s.contact = "Mr.Bill, 0946573928";       
+        System.out.println(s.name);
+        
+        String[] all = context.getBeanDefinitionNames();
+        for(int i = 0; i < all.length; i++) {
+            System.out.println(all[i]);
+        }
     }
 }
 

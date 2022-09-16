@@ -4,6 +4,13 @@
     <artifactId>java-spring-dependencies</artifactId>
     <version>classroom</version>
     
+    <repositories>
+        <repository>
+            <id>uptome</id>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+    </repositories>
+    
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
@@ -13,4 +20,18 @@
         <sourceDirectory>code</sourceDirectory>
         <testSourceDirectory>test</testSourceDirectory>
     </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>6.0.0-M5</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.0.0-M5</version>
+        </dependency>
+    </dependencies>
 </project>

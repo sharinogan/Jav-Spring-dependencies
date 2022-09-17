@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="first" class="Shop">
+        <property name="name" value="Whitecat dessert" />
+        <property name="contact" value="Mr.Bill, 0934756294" />
+    </bean>
+    <bean id="second" class="Shop">
+        <property name="name" value="Hamburger Quickly" />
+        <property name="contact" value="Mr.James, james@xxx.com" />
+    </bean>
+    <bean id="third" class="Shop">
+        <property name="name" value="iMovie Studio" />
+        <property name="contact" value="Mr.John" />
+    </bean>
+    
+    <bean id="x" class="Whatever"></bean>
+ 
+</beans>
